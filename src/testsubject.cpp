@@ -10,5 +10,6 @@ int TestSubject::square(int x) {
     } else {
         // Intentionally made wrong
         return x + x;
+        //return x * x;
     }
 }

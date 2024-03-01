@@ -17,7 +17,7 @@ Triangle::Triangle(int side1, int side2, int side3)
 
 int
 Triangle::getPerimeter() const {
-  return side1 + side2 + side2;
+  return side1 + side2 + side3;
 }
 
 
@@ -47,10 +47,10 @@ Triangle::isEquilateral() const {
 
 Triangle::Kind
 Triangle::getKind() const {
-  if (isIsosceles()) {
-    return Kind::ISOSCELES;
-  } else if (isEquilateral()) {
+  if (isEquilateral()) {
     return Kind::EQUILATERAL;
+  } else if (isIsosceles()) {
+    return Kind::ISOSCELES;
   } else {
     return Kind::SCALENE;
   }
